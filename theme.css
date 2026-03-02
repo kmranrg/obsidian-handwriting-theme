@@ -29,8 +29,8 @@
 }
 
 /* Apply Kalam + base size/colour to the whole note (edit + preview) */
-.markdown-preview-view.handwriting,
-.markdown-source-view.handwriting .cm-content {
+.markdown-preview-view,
+.markdown-source-view .cm-content {
   font-family: 'Kalam', cursive;
   font-size: 1.3em;
   line-height: 1.6;
@@ -38,12 +38,12 @@
 }
 
 /* Headings in both modes */
-.markdown-preview-view.handwriting h1,
-.markdown-preview-view.handwriting h2,
-.markdown-preview-view.handwriting h3,
-.markdown-source-view.handwriting .cm-header-1,
-.markdown-source-view.handwriting .cm-header-2,
-.markdown-source-view.handwriting .cm-header-3 {
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-source-view .cm-header-1,
+.markdown-source-view .cm-header-2,
+.markdown-source-view .cm-header-3 {
   color: #1e3a8a;                 /* deep “pen‑ink” blue                 */
 }
 
@@ -52,14 +52,14 @@
   ───────────────────────────────────────────────────────────────────*/
 
 /* Bold text */
-.markdown-preview-view.handwriting strong,
-.markdown-source-view.handwriting .cm-strong {
+.markdown-preview-view strong,
+.markdown-source-view .cm-strong {
   color: #800080;                 /* purple emphasis                     */
 }
 
 /* Inline code */
-.handwriting code,
-.handwriting .cm-inline-code {
+ code,
+ .cm-inline-code {
   font-family: 'Courier New', monospace;
   background: rgba(0, 0, 0, 0.05);
   padding: 2px 4px;
@@ -67,8 +67,11 @@
 }
 
 /* MathJax in preview */
-.markdown-preview-view.handwriting mjx-container {
+.markdown-preview-view mjx-container,
+.MJX-TEX,
+.math-block {
   font-family: 'Kalam', cursive !important;
+  font-weight: 600;
 }
 
 /*─────────────────────────────────────────────────────────────────────
@@ -77,48 +80,46 @@
 
 /* ---------- 3‑A Preview pane ------------------------------------- */
 
-.markdown-preview-view.handwriting table {
+.markdown-preview-view table {
   font-family: 'Kalam', cursive;
   font-size: 1.3em;
   width: 100%;
   border-collapse: collapse;
-  margin: 1em 0;
 }
 
-.markdown-preview-view.handwriting th,
-.markdown-preview-view.handwriting td {
+.markdown-preview-view th,
+.markdown-preview-view td {
   border: 1px solid #bbb;
   padding: 0.6em 1em;
   text-align: left;
 }
 
 /* Header row – force colour on every cell */
-.markdown-preview-view.handwriting thead > tr > * {
+.markdown-preview-view thead > tr > * {
   background: #f0f8ff !important; /* light‑blue header background        */
   color: #1e3a8a !important;      /* deep‑blue header text               */
   font-weight: bold;
 }
 
 /* Body cell text colour */
-.markdown-preview-view.handwriting tbody td {
+.markdown-preview-view tbody td {
   color: #4682b4 !important;      /* sky‑blue body text in tables        */
 }
 
 /* ---------- 3‑B Live Preview (editing) --------------------------- */
 /* Real <table> lives inside .cm-table-widget */
 
-.markdown-source-view.handwriting.mod-cm6.is-live-preview
+.markdown-source-view.mod-cm6.is-live-preview
   .cm-table-widget table {
   font-family: 'Kalam', cursive;
   font-size: 1.3em;
   width: 100%;
   border-collapse: collapse;
-  margin: 1em 0;
 }
 
-.markdown-source-view.handwriting.mod-cm6.is-live-preview
+.markdown-source-view.mod-cm6.is-live-preview
   .cm-table-widget th,
-.markdown-source-view.handwriting.mod-cm6.is-live-preview
+.markdown-source-view.mod-cm6.is-live-preview
   .cm-table-widget td {
   border: 1px solid #bbb;
   padding: 0.6em 1em;
@@ -126,7 +127,7 @@
 }
 
 /* Header cells */
-.markdown-source-view.handwriting.mod-cm6.is-live-preview
+.markdown-source-view.mod-cm6.is-live-preview
   .cm-table-widget th {
   background: #f0f8ff !important;
   color: #1e3a8a !important;
@@ -134,9 +135,9 @@
 }
 
 /* Body cells (fallback selector hits token view if widget absent) */
-.markdown-source-view.handwriting.mod-cm6.is-live-preview
+.markdown-source-view.mod-cm6.is-live-preview
   .cm-table-widget tbody td,
-.markdown-source-view.handwriting.mod-cm6.is-live-preview
+.markdown-source-view.mod-cm6.is-live-preview
   .cm-line span.cm-table-row {
   color: #4682b4 !important;
 }
